@@ -1,0 +1,6 @@
+
+pyspark
+pyarrow
+duckdb
+python-dotenv
+pytest

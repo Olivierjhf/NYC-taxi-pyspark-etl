@@ -1,0 +1,33 @@
+
+# Python virtual environments
+.venv/
+.venv_airflow/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Raw datasets and generated data
+data/raw/
+data/lakehouse/
+
+# Logs
+logs/
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Airflow database and local configuration
+airflow.db
+airflow.db-*
+airflow.cfg
+airflow-webserver.pid
+
+# Operating system and editor files
+.DS_Store
+.vscode/
