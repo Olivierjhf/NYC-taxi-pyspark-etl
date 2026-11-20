@@ -21,6 +21,7 @@ from src.validation import (
 )
 
 from src.logger import setup_logger
+from src.s3_upload import upload_gold_to_s3
 
 logger = setup_logger(__name__)
 
@@ -177,7 +178,12 @@ def run_etl_pipeline():
         )
 
         logger.info("All data quality validations passed")
+        # Step 16: Upload Gold Parquet files to Amazon S3
+        logger.info("Starting Gold layer upload to Amazon S3")
 
+        upload_gold_to_s3()
+
+        logger.info("Gold layer successfully uploaded to Amazon S3")
 
     except Exception:
         logger.exception("ETL pipeline failed")
@@ -190,5 +196,3 @@ def run_etl_pipeline():
 
 if __name__ == "__main__":
     run_etl_pipeline()
-
-    

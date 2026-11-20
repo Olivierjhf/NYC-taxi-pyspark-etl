@@ -31,3 +31,6 @@ airflow-webserver.pid
 # Operating system and editor files
 .DS_Store
 .vscode/
+
+# AWS local credentials
+.aws/
